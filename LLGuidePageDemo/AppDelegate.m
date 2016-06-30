@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "LLGuidPageViewController.h"
+#import "ViewController.h"
+
+
 
 @interface AppDelegate ()
 
@@ -15,8 +19,82 @@
 @implementation AppDelegate
 
 
+- (BOOL)isNEWVerson{
+    
+    
+    //新特性的显示逻辑分析 -> 根据版本号
+    
+    //1.获取 info.plist 文件的所有信息
+    NSDictionary *infoDict = [NSBundle mainBundle].infoDictionary;
+    
+    //2.获取应用的版本号
+    NSString *currVersion = infoDict[@"CFBundleShortVersionString"];
+    
+    // - 旧的版本号从偏好设置内获取
+    
+    //获取偏好设置对象
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    //读取旧 的版本号
+    
+    NSString *oldVision = [defaults objectForKey:@"app_version"];
+    
+    //比较版本号
+    if([currVersion isEqualToString:oldVision]){
+        
+        return NO;
+    }else {
+        
+        //否则需要显示,需要将新的版本号存起来
+        
+        //存储新的版本号
+        //1.获取偏好设置对象
+        //存储版本号
+        [defaults setObject:currVersion forKey:@"app_version"];
+        //数据同步
+        [defaults synchronize];
+        
+        return YES;
+        
+    }
+    
+    
+}
+
+
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    if ([self isNEWVerson]) {
+        // 初始化引导页控制器
+        LLGuidPageViewController *view = [[LLGuidPageViewController alloc]init];
+        
+        
+        // 设置引导页图片
+        view.dataArray = [NSArray arrayWithObjects:@"first.jpeg",@"second.jpeg",@"three.jpeg",@"fourth.jpeg", nil];
+        // 设置跳转界面
+        view.controller = [[ViewController alloc]init];
+        
+        self.window.rootViewController = view;
+        
+        
+    } else {
+        // 设置跳转界面
+        //  view.controller = [[ViewController alloc]init];
+        
+        ViewController *VC = [[ViewController alloc] init];
+        
+        self.window.rootViewController = VC;
+    }
+    
+    
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

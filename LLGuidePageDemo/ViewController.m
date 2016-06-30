@@ -13,10 +13,15 @@
 @end
 
 @implementation ViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    UILabel *textLabel = [[UILabel alloc]initWithFrame:self.view.bounds];
+    textLabel.textAlignment = NSTextAlignmentCenter;
+    textLabel.font = [UIFont systemFontOfSize:20];
+    textLabel.text = @"你跳转到了首页";
+    [self.view addSubview:textLabel];
+    
 }
 
 - (void)didReceiveMemoryWarning {

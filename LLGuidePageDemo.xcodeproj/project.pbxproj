@@ -14,6 +14,12 @@
 		4AD5E5101D24F27F00948361 /* LLGuidePageDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5E50E1D24F27F00948361 /* LLGuidePageDemo.xcdatamodeld */; };
 		4AD5E5121D24F27F00948361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5111D24F27F00948361 /* Assets.xcassets */; };
 		4AD5E5151D24F27F00948361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5131D24F27F00948361 /* LaunchScreen.storyboard */; };
+		4AD5E51E1D24F2AB00948361 /* LLGuidPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5E51D1D24F2AB00948361 /* LLGuidPageViewController.m */; };
+		4AD5E5211D24F2FF00948361 /* LLPageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD5E5201D24F2FF00948361 /* LLPageCollectionViewCell.m */; };
+		4AD5E5271D24F49D00948361 /* first@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5231D24F49D00948361 /* first@2x.jpeg */; };
+		4AD5E5281D24F49D00948361 /* fourth@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5241D24F49D00948361 /* fourth@2x.jpeg */; };
+		4AD5E5291D24F49D00948361 /* second@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5251D24F49D00948361 /* second@2x.jpeg */; };
+		4AD5E52A1D24F49D00948361 /* three@2x.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4AD5E5261D24F49D00948361 /* three@2x.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,14 @@
 		4AD5E5111D24F27F00948361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AD5E5141D24F27F00948361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AD5E5161D24F27F00948361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AD5E51C1D24F2AB00948361 /* LLGuidPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLGuidPageViewController.h; sourceTree = "<group>"; };
+		4AD5E51D1D24F2AB00948361 /* LLGuidPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLGuidPageViewController.m; sourceTree = "<group>"; };
+		4AD5E51F1D24F2FF00948361 /* LLPageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LLPageCollectionViewCell.h; path = ../LLPageCollectionViewCell.h; sourceTree = "<group>"; };
+		4AD5E5201D24F2FF00948361 /* LLPageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LLPageCollectionViewCell.m; path = ../LLPageCollectionViewCell.m; sourceTree = "<group>"; };
+		4AD5E5231D24F49D00948361 /* first@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "first@2x.jpeg"; sourceTree = "<group>"; };
+		4AD5E5241D24F49D00948361 /* fourth@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fourth@2x.jpeg"; sourceTree = "<group>"; };
+		4AD5E5251D24F49D00948361 /* second@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "second@2x.jpeg"; sourceTree = "<group>"; };
+		4AD5E5261D24F49D00948361 /* three@2x.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "three@2x.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +58,7 @@
 		4AD5E4F61D24F27F00948361 = {
 			isa = PBXGroup;
 			children = (
+				4AD5E5221D24F49D00948361 /* images */,
 				4AD5E5011D24F27F00948361 /* LLGuidePageDemo */,
 				4AD5E5001D24F27F00948361 /* Products */,
 			);
@@ -70,6 +85,10 @@
 				4AD5E5161D24F27F00948361 /* Info.plist */,
 				4AD5E50E1D24F27F00948361 /* LLGuidePageDemo.xcdatamodeld */,
 				4AD5E5021D24F27F00948361 /* Supporting Files */,
+				4AD5E51C1D24F2AB00948361 /* LLGuidPageViewController.h */,
+				4AD5E51D1D24F2AB00948361 /* LLGuidPageViewController.m */,
+				4AD5E51F1D24F2FF00948361 /* LLPageCollectionViewCell.h */,
+				4AD5E5201D24F2FF00948361 /* LLPageCollectionViewCell.m */,
 			);
 			path = LLGuidePageDemo;
 			sourceTree = "<group>";
@@ -80,6 +99,17 @@
 				4AD5E5031D24F27F00948361 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4AD5E5221D24F49D00948361 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4AD5E5231D24F49D00948361 /* first@2x.jpeg */,
+				4AD5E5241D24F49D00948361 /* fourth@2x.jpeg */,
+				4AD5E5251D24F49D00948361 /* second@2x.jpeg */,
+				4AD5E5261D24F49D00948361 /* three@2x.jpeg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +171,11 @@
 			files = (
 				4AD5E5151D24F27F00948361 /* LaunchScreen.storyboard in Resources */,
 				4AD5E5121D24F27F00948361 /* Assets.xcassets in Resources */,
+				4AD5E5281D24F49D00948361 /* fourth@2x.jpeg in Resources */,
+				4AD5E52A1D24F49D00948361 /* three@2x.jpeg in Resources */,
 				4AD5E50D1D24F27F00948361 /* Main.storyboard in Resources */,
+				4AD5E5291D24F49D00948361 /* second@2x.jpeg in Resources */,
+				4AD5E5271D24F49D00948361 /* first@2x.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD5E51E1D24F2AB00948361 /* LLGuidPageViewController.m in Sources */,
+				4AD5E5211D24F2FF00948361 /* LLPageCollectionViewCell.m in Sources */,
 				4AD5E5101D24F27F00948361 /* LLGuidePageDemo.xcdatamodeld in Sources */,
 				4AD5E50A1D24F27F00948361 /* ViewController.m in Sources */,
 				4AD5E5071D24F27F00948361 /* AppDelegate.m in Sources */,
